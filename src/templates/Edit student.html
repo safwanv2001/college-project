@@ -1,0 +1,72 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+{% extends 'sindex.html' %}
+    {% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="editing_student#about">
+  <div align="center">
+    <table width="290" border="1" id="customers">
+      <tr>
+        <th width="168" scope="row">First name </th>
+        <td width="106"><input type="text" name="textfield" value="{{val[2]}}" /></td>
+      </tr>
+      <tr>
+        <th scope="row"><p>Last name </p>      </th>
+        <td><input type="text" name="textfield2" value="{{val[3]}}"/></td>
+      </tr>
+      <tr>
+        <th scope="row">Gender</th>
+        <td><p>
+            <input name="radiobutton" type="radio" value="Male" {% if val[4]=='Male' %} checked {% endif %}/>
+            Male</p>
+          <p>  
+            <input name="radiobutton" type="radio" value="Female" {% if val[4]=='Female' %} checked {% endif %}/>
+        female</p></td>
+      </tr>
+      <tr>
+        <th scope="row">Dob</th>
+        <td><input type="date" name="textfield3" value="{{val[5]}}"/></td>
+      </tr>
+      <tr>
+        <th scope="row">Place</th>
+        <td><input type="text" name="textfield4" value="{{val[6]}}"/></td>
+      </tr>
+      <tr>
+        <th scope="row">Post</th>
+        <td><input type="text" name="textfield5" value="{{val[7]}}"/></td>
+      </tr>
+      <tr>
+        <th scope="row">Pin</th>
+        <td><input type="text" name="textfield6" value="{{val[8]}}"/></td>
+      </tr>
+      <tr>
+        <th scope="row"><div align="center">Semester</div></th>
+        <td><select name="select">
+          <option value="1st sem"{% if val[9]=="1"  %} selected {% endif %}>1st sem</option>
+          <option value="2nd sem"{% if val[9]=="2"  %} selected {% endif %}>2nd sem</option>
+          <option value="3rd sem"{% if val[9]=="3"  %} selected {% endif %}>3rd sem</option>
+          <option value="4th sem"{% if val[9]=="4"  %} selected {% endif %}>4th sem</option>
+          <option value="5th sem"{% if val[9]=="5"  %} selected {% endif %}>5th sem</option>
+          <option value="6th sem"{% if val[9]=="6"  %} selected {% endif %}>6th sem</option>
+          </select>        </td>
+      </tr>
+      <tr>
+        <th scope="row">Phone</th>
+        <td><input type="text" name="textfield7" value="{{val[10]}}"/></td>
+      </tr>
+      <tr>
+        <th scope="row">Email</th>
+        <td><input type="text" name="textfield8" value="{{val[11]}}"/></td>
+      </tr>
+       <tr>
+        <th colspan="2" scope="row"><input type="submit" name="Submit" value="add" class="btn btn-light"/></th>
+      </tr>
+      </table>
+  </div>
+</form>
+</body>
+{% endblock %}

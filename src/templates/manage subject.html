@@ -1,0 +1,56 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+{% extends 'aindex.html' %}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="search_subject#about">
+  <table width="229" height="85" border="1" id="customers">
+      <tr>
+      <th>Semester :</th>
+      <td colspan="2">
+    <select name="select" class="form-select">
+          <option>select</option>
+          <option>1st sem</option>
+          <option>2nd sem</option>
+          <option>3rd sem</option>
+          <option>4st sem</option>
+          <option>5nd sem</option>
+          <option>6rd sem</option>
+        </select>
+      </td>
+          <td>
+
+    <input type="submit" name="Submit" value="Search" class="btn btn-success"/>
+      </td>
+ </tr>
+
+
+      <tr>
+        <th scope="col">Subject</th>
+        <th scope="col">Subject code </th>
+        <th scope="col">Semester</th>
+        <th scope="col">&nbsp;</th>
+      </tr>
+{% for i in val %}
+      <tr>
+        <td>{{i[2]}} </td>
+        <td>{{i[3]}}&nbsp;</td>
+        <td>{{i[1]}}</td>
+        <td><button class="btn btn-link"><a href="delete_subject?id={{i[0]}}">Remove</a></button></td>
+      </tr>
+{% endfor %}
+    </table>
+      </form>
+      <form id="form2" name="form1" method="post" action="add_subject#about">
+
+    <input type="submit" name="Submit2" value="Add new" class="btn btn-success"/>
+      </form>
+
+
+
+</body>
+{% endblock %}

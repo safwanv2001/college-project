@@ -1,0 +1,40 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+{% extends 'sindex.html' %}
+     {% block body %}
+<body>
+ <form id="form" name="from" method="post" action="searchstud#about">
+     <p align="center"><b>Subject :</b>
+        <select name="select">
+          <option>select</option>
+          {% for i in val %}
+          <option value="{{i[0]}}" {% if i[0]|string ==subj %} selected {% endif %}>{{i[2]}}</option>
+          {% endfor %}
+        </select>  <input type="submit" name="btn" value="Search" class="btn btn-success"/>
+
+     </p>
+  <div align="center">
+    <table width="211" border="1" id="customers">
+      <tr>
+        <th width="64" scope="col">Student</th>
+        <th width="131" scope="col">Mark</th>
+      </tr>
+      {% for i in val1 %}
+      <tr>
+        <td><input type="hidden" name="name"  value="{{i[1]}}"  />{{i[2]}} {{i[3]}}</td>
+        <td><input type="text" name="textfield" /></td>
+      </tr>
+      {% endfor %}
+      </table>
+  </div>
+  <p align="center">
+    <input type="submit" name="btn" value="Add" class="btn btn-success"/>
+  </p>
+   </form>
+</body>
+
+{% endblock %}

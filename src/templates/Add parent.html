@@ -1,0 +1,58 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+{% extends 'sindex.html' %}
+     {% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="adding_parent">
+  <div align="center">
+    <table width="290" border="1" id="customers">
+      <tr>
+        <th width="168" scope="row">First name </th>
+        <td width="106"><input type="text" name="textfield" /></td>
+      </tr>
+      <tr>
+        <th scope="row"><p>Last name </p>      </th>
+        <td><input type="text" name="textfield2" /></td>
+      </tr>
+      <tr>
+      <tr>
+        <th scope="row">Place</th>
+        <td><input type="text" name="textfield4" /></td>
+      </tr>
+      <tr>
+        <th scope="row">Post</th>
+        <td><input type="text" name="textfield5" /></td>
+      </tr>
+      <tr>
+        <th scope="row">Pin</th>
+        <td><input type="text" name="textfield6" /></td>
+      </tr>
+      <tr>
+      <tr>
+        <th scope="row">Phone</th>
+        <td><input type="text" name="textfield7" /></td>
+      </tr>
+      <tr>
+        <th scope="row">Email</th>
+        <td><input type="text" name="textfield8" /></td>
+      </tr>
+      <tr>
+        <th scope="row">username</th>
+        <th scope="row"><input type="text" name="textfield9" /></th>
+      </tr>
+      <tr>
+        <th scope="row">password</th>
+        <th scope="row"><input type="password" name="textfield10" id="textfield10" /></th>
+      </tr>
+      <tr>
+        <th colspan="2" scope="row"><input type="submit" name="Submit" value="add" /></th>
+      </tr>
+      </table>
+  </div>
+</form>
+</body>
+{% endblock %}
